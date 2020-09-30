@@ -29,6 +29,7 @@
                 disabled: '=?ngDisabled',
                 labels: '=?',
                 classesBtn: '=?',
+                classesDropdown: '=?',
                 showTooltip: '=?',
                 placeholder: '@?'
             },
@@ -37,6 +38,10 @@
             controller: function($scope) {
                 if (angular.isUndefined($scope.classesBtn)) {
                     $scope.classesBtn = ['btn-block','btn-default'];
+                }
+
+                if (angular.isUndefined($scope.classesDropdown)) {
+                    $scope.classesDropdown = ['dropdown-menu dropdown-menu-form'];
                 }
             },
             link: function ($scope, $element, $attrs, $ngModelCtrl) {

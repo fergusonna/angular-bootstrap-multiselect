@@ -1,8 +1,8 @@
-<div class="btn-group" style="width: 100%">
+<div class="btn-group" style="width: 90%">
     <button type="button" class="btn dropdown-toggle" ng-class="classesBtn" ng-click="toggleDropdown()" ng-disabled="disabled" style="white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis;">
         {{getButtonText()}}&nbsp;<span class="caret"></span>
     </button>
-    <ul class="dropdown-menu dropdown-menu-form"
+    <ul ng-class="classesDropdown"
         ng-style="{display: open ? 'block' : 'none'}" style="width: 100%; overflow-x: auto">
 
         <li ng-show="showSelectAll">

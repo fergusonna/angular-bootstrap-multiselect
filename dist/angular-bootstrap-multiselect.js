@@ -29,6 +29,7 @@
                 disabled: '=?ngDisabled',
                 labels: '=?',
                 classesBtn: '=?',
+                classesDropdown: '=?',
                 showTooltip: '=?',
                 placeholder: '@?'
             },
@@ -37,6 +38,10 @@
             controller: ['$scope', function($scope) {
                 if (angular.isUndefined($scope.classesBtn)) {
                     $scope.classesBtn = ['btn-block','btn-default'];
+                }
+
+                if (angular.isUndefined($scope.classesDropdown)) {
+                    $scope.classesDropdown = ['dropdown-menu dropdown-menu-form'];
                 }
             }],
             link: function ($scope, $element, $attrs, $ngModelCtrl) {
@@ -246,11 +251,11 @@ angular.module('btorfs.multiselect.templates', ['multiselect.html']);
 
 angular.module("multiselect.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("multiselect.html",
-    "<div class=\"btn-group\" style=\"width: 100%\">\n" +
+    "<div class=\"btn-group\" style=\"width: 90%\">\n" +
     "    <button type=\"button\" class=\"btn dropdown-toggle\" ng-class=\"classesBtn\" ng-click=\"toggleDropdown()\" ng-disabled=\"disabled\" style=\"white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis;\">\n" +
     "        {{getButtonText()}}&nbsp;<span class=\"caret\"></span>\n" +
     "    </button>\n" +
-    "    <ul class=\"dropdown-menu dropdown-menu-form\"\n" +
+    "    <ul ng-class=\"classesDropdown\"\n" +
     "        ng-style=\"{display: open ? 'block' : 'none'}\" style=\"width: 100%; overflow-x: auto\">\n" +
     "\n" +
     "        <li ng-show=\"showSelectAll\">\n" +

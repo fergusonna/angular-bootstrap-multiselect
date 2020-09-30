@@ -1,11 +1,11 @@
 {
   "name": "angular-bootstrap-multiselect",
-  "version": "1.1.11",
-  "homepage": "http://bentorfs.github.io/angular-bootstrap-multiselect/",
+  "version": "1.1.11.1",
+  "homepage": "https://github.com/fergusonna/angular-bootstrap-multiselect/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bentorfs/angular-bootstrap-multiselect.git"
+    "url": "https://github.com/fergusonna/angular-bootstrap-multiselect.git"
   },
   "main": "index.js",
   "devDependencies": {
